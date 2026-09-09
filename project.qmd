@@ -1,8 +1,125 @@
 ---
-title: "Project"
-format: html
+title: "Final Project Milestone 3"
+format:
+  html:
+    theme: cosmo
+    page-layout: full
+execute:
+  echo: false
 ---
 
-# Project
+# Final Project Milestone 3
 
-Add your analysis here.
+```{r}
+#| message: false
+library(tidyverse)
+library(gt)
+library(plotly)
+
+billboard <- read_csv("data/billboard_2026_data.csv")
+```
+
+## Genre Breakdown & Performance
+
+```{r}
+#| out-width: "100%"
+#| fig-height: 7
+genre_stats <- billboard |> 
+  slice_head(n = 100) |> 
+  group_by(Genre) |> 
+  summarize(
+    Count = n(),
+    Avg_Rank = round(mean(Rank), 1),
+    Best_Rank = min(Rank),
+    Top_Song = Song[which.min(Rank)],
+    Worst_Rank = max(Rank),
+    Lowest_Song = Song[which.max(Rank)],
+    .groups = "drop"
+  ) |> 
+  mutate(
+    Bar_Label = ifelse(Count >= 5, paste0(Count, " songs"), as.character(Count))
+  )
+
+p <- ggplot(genre_stats, aes(
+  x = Count, 
+  y = fct_reorder(Genre, Count),
+  fill = Avg_Rank,
+  text = paste0(
+    "🎵 <b>", Genre, "</b><br>",
+    "━━━━━━━━━━━━━━━━━━<br>",
+    "📊 Songs in Top 100: <b>", Count, "</b><br>",
+    "📈 Average Chart Rank: <b>#", Avg_Rank, "</b><br>",
+    "⭐ Highest Song: <b>#", Best_Rank, "</b> (", Top_Song, ")<br>",
+    "🔻 Lowest Song: <b>#", Worst_Rank, "</b> (", Lowest_Song, ")"
+  )
+)) +
+  geom_col(width = 0.72, color = "white", linewidth = 0.6, alpha = 0.92) +
+  geom_text(
+    aes(x = Count / 2, label = Bar_Label), 
+    color = "white", 
+    fontface = "bold", 
+    size = 3.6
+  ) +
+  scale_fill_gradientn(
+    colors = c("#0284c7", "#2563eb", "#6366f1", "#9333ea", "#c084fc"),
+    name = "Avg Rank\n(#1 is top)"
+  ) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.08))) +
+  labs(
+    title = "Top 100 Genre Breakdown & Performance",
+    x = "Number of Songs in Top 100",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold", size = 14, color = "#0f172a"),
+    axis.text.y = element_text(face = "bold", size = 11, color = "#1e293b"),
+    axis.text.x = element_text(color = "#64748b")
+  )
+
+ggplotly(p, height = 580, tooltip = "text") |> 
+  layout(autosize = TRUE) |> 
+  config(responsive = TRUE)
+```
+
+## Summary Statistics
+
+```{r}
+billboard |> 
+  slice_head(n = 100) |> 
+  summarize(
+    `Average Weeks on Chart` = round(mean(Weeks_on_Chart, na.rm = TRUE), 1),
+    `Median Weeks on Chart` = median(Weeks_on_Chart, na.rm = TRUE),
+    `Most Weeks on Chart` = max(Weeks_on_Chart, na.rm = TRUE),
+    `Songs Reaching #1` = sum(Peak == 1, na.rm = TRUE)
+  ) |> 
+  gt()
+```
+
+## First 100 Songs
+
+```{r}
+billboard |> 
+  slice_head(n = 100) |> 
+  select(Rank, Cover, Song, Artist, Genre, Last_Week, Peak, Weeks_on_Chart) |> 
+  gt() |> 
+  tab_header(
+    title = "Billboard Hot 100",
+    subtitle = "Week of February 7, 2026"
+  ) |> 
+  cols_label(
+    Rank = "#",
+    Cover = "",
+    Song = "Song",
+    Artist = "Artist",
+    Genre = "Genre",
+    Last_Week = "Last Wk",
+    Peak = "Peak",
+    Weeks_on_Chart = "Wks on Chart"
+  ) |> 
+  fmt_image(columns = Cover, height = 45) |> 
+  tab_options(table.width = pct(100)) |> 
+  opt_interactive(use_pagination = TRUE, page_size_default = 25)
+```

@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -113,38 +78,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="project" class="level1">
 <h1>Project</h1>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>billboard <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/billboard_2026_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <section id="first-100-songs" class="level2">
 <h2 class="anchored" data-anchor-id="first-100-songs">First 100 Songs</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>billboard <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">100</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_image</span>(<span class="at">columns =</span> Cover, <span class="at">height =</span> <span class="dv">45</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_interactive</span>(<span class="at">use_pagination =</span> <span class="cn">TRUE</span>, <span class="at">page_size_default =</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fljpaarxfu" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fljpaarxfu table {
+<div id="avnrkharvb" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#avnrkharvb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fljpaarxfu thead, #fljpaarxfu tbody, #fljpaarxfu tfoot, #fljpaarxfu tr, #fljpaarxfu td, #fljpaarxfu th {
+#avnrkharvb thead, #avnrkharvb tbody, #avnrkharvb tfoot, #avnrkharvb tr, #avnrkharvb td, #avnrkharvb th {
   border-style: none;
 }
 
-#fljpaarxfu p {
+#avnrkharvb p {
   margin: 0;
   padding: 0;
 }
 
-#fljpaarxfu .gt_table {
+#avnrkharvb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -170,12 +124,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_caption {
+#avnrkharvb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fljpaarxfu .gt_title {
+#avnrkharvb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -187,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#fljpaarxfu .gt_subtitle {
+#avnrkharvb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -199,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#fljpaarxfu .gt_heading {
+#avnrkharvb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -211,13 +165,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_bottom_border {
+#avnrkharvb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_col_headings {
+#avnrkharvb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -232,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_col_heading {
+#avnrkharvb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -252,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fljpaarxfu .gt_column_spanner_outer {
+#avnrkharvb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -264,15 +218,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#fljpaarxfu .gt_column_spanner_outer:first-child {
+#avnrkharvb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fljpaarxfu .gt_column_spanner_outer:last-child {
+#avnrkharvb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fljpaarxfu .gt_column_spanner {
+#avnrkharvb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -284,11 +238,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#fljpaarxfu .gt_spanner_row {
+#avnrkharvb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fljpaarxfu .gt_group_heading {
+#avnrkharvb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -314,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#fljpaarxfu .gt_empty_group_heading {
+#avnrkharvb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -329,15 +283,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#fljpaarxfu .gt_from_md > :first-child {
+#avnrkharvb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fljpaarxfu .gt_from_md > :last-child {
+#avnrkharvb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fljpaarxfu .gt_row {
+#avnrkharvb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -356,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fljpaarxfu .gt_stub {
+#avnrkharvb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -369,7 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fljpaarxfu .gt_stub_row_group {
+#avnrkharvb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -383,15 +337,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#fljpaarxfu .gt_row_group_first td {
+#avnrkharvb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fljpaarxfu .gt_row_group_first th {
+#avnrkharvb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fljpaarxfu .gt_summary_row {
+#avnrkharvb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -401,16 +355,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fljpaarxfu .gt_first_summary_row {
+#avnrkharvb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_first_summary_row.thick {
+#avnrkharvb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fljpaarxfu .gt_last_summary_row {
+#avnrkharvb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -420,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_grand_summary_row {
+#avnrkharvb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -430,7 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fljpaarxfu .gt_first_grand_summary_row {
+#avnrkharvb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -440,7 +394,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_last_grand_summary_row_top {
+#avnrkharvb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -450,11 +404,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_striped {
+#avnrkharvb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fljpaarxfu .gt_table_body {
+#avnrkharvb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -463,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_footnotes {
+#avnrkharvb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -477,7 +431,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_footnote {
+#avnrkharvb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -486,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fljpaarxfu .gt_sourcenotes {
+#avnrkharvb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -500,7 +454,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fljpaarxfu .gt_sourcenote {
+#avnrkharvb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -508,77 +462,554 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fljpaarxfu .gt_left {
+#avnrkharvb .gt_left {
   text-align: left;
 }
 
-#fljpaarxfu .gt_center {
+#avnrkharvb .gt_center {
   text-align: center;
 }
 
-#fljpaarxfu .gt_right {
+#avnrkharvb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fljpaarxfu .gt_font_normal {
+#avnrkharvb .gt_font_normal {
   font-weight: normal;
 }
 
-#fljpaarxfu .gt_font_bold {
+#avnrkharvb .gt_font_bold {
   font-weight: bold;
 }
 
-#fljpaarxfu .gt_font_italic {
+#avnrkharvb .gt_font_italic {
   font-style: italic;
 }
 
-#fljpaarxfu .gt_super {
+#avnrkharvb .gt_super {
   font-size: 65%;
 }
 
-#fljpaarxfu .gt_footnote_marks {
+#avnrkharvb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fljpaarxfu .gt_asterisk {
+#avnrkharvb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fljpaarxfu .gt_indent_1 {
+#avnrkharvb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fljpaarxfu .gt_indent_2 {
+#avnrkharvb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fljpaarxfu .gt_indent_3 {
+#avnrkharvb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fljpaarxfu .gt_indent_4 {
+#avnrkharvb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fljpaarxfu .gt_indent_5 {
+#avnrkharvb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fljpaarxfu .katex-display {
+#avnrkharvb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fljpaarxfu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#avnrkharvb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
-<div id="fljpaarxfu" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="fljpaarxfu">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Week":["2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07"],"Rank":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100],"Cover":["https://charts-static.billboard.com/img/2017/04/harry-styles-tuw-180x180.jpg","https://charts-static.billboard.com/img/2025/11/ellalangley-0yx-choosintexas-3s2-180x180.jpg","https://charts-static.billboard.com/img/2025/08/oliviadean-8k4-manineed-jej-180x180.jpg","https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-golden-ozh-180x180.jpg","https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-thefateofophelia-ki7-180x180.jpg","https://charts-static.billboard.com/img/2010/01/bruno-mars-8dl-180x180.jpg","https://charts-static.billboard.com/img/2025/02/alexwarren-vcb-ordinary-jb8-180x180.jpg","https://charts-static.billboard.com/img/2025/02/sombr-2ps-backtofriends-xkb-180x180.jpg","https://charts-static.billboard.com/img/2025/06/kehlani-b5q-folded-beh-180x180.jpg","https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-opalite-05j-180x180.jpg","https://charts-static.billboard.com/img/2024/02/djo-fyo-endofbeginning-lak-180x180.jpg","https://charts-static.billboard.com/img/2024/10/leonthomas-y3w-mutt-ch5-180x180.jpg","https://charts-static.billboard.com/img/2025/10/raye-azb-whereismyhusband-mtb-180x180.jpg","https://charts-static.billboard.com/img/2026/01/lil-uzi-vert-z30-whatyousaying-y59-180x180.jpg","https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-igotbetter-8s9-180x180.jpg","https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg","https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-20cigarettes-37w-180x180.jpg","https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg","https://charts-static.billboard.com/img/2025/11/siennaspiro-o5d-dieonthishill-f28-180x180.jpg","https://charts-static.billboard.com/img/2016/09/gunna-t8f-180x180.jpg","https://charts-static.billboard.com/img/2015/07/luke-combs-vjy-180x180.jpg","https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg","https://charts-static.billboard.com/img/2025/10/tatemcrae-vd8-titfortat-qq9-180x180.jpg","https://charts-static.billboard.com/img/2025/08/chris-brown-cyh-itdepends-6sf-180x180.jpg","https://charts-static.billboard.com/img/2024/05/mylessmith-w4f-180x180.jpg","https://charts-static.billboard.com/img/2024/11/maxmcnown-0ht-bettermeforyoubrowneyes-h8h-180x180.jpg","https://charts-static.billboard.com/img/2019/01/shaboozey-2wm-180x180.jpg","https://charts-static.billboard.com/img/2023/02/bigxthaplug-b4l-180x180.jpg","https://charts-static.billboard.com/img/2025/07/katseye-xrz-gabriela-iea-180x180.jpg","https://charts-static.billboard.com/img/2025/05/pinkpantheress-j53-stateside-ska-180x180.jpg","https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg","https://charts-static.billboard.com/img/2025/11/oliviadean-8k4-acoupleminutes-of9-180x180.jpg","https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg","https://charts-static.billboard.com/img/2025/05/cody-johnson-0vx-thefall-rvi-180x180.jpg","https://charts-static.billboard.com/img/2024/11/hudsonwestbrook-9ly-houseagain-zq0-180x180.jpg","https://charts-static.billboard.com/img/2016/01/zara-larsson-zej-lushlife-cik-180x180.jpg","https://charts-static.billboard.com/img/2025/09/jason-aldean-903-howfardoesagoodbyego-vgz-180x180.jpg","https://charts-static.billboard.com/img/2025/04/hardy-rmc-favoritecountrysong-jny-180x180.jpg","https://charts-static.billboard.com/img/2025/10/luke-combs-s5l-dayslikethese-eep-180x180.jpg","https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg","https://charts-static.billboard.com/img/1984/09/prince-5k7-purplerain-6pm-180x180.jpg","https://charts-static.billboard.com/img/2021/01/mariahthescientist-nuo-180x180.jpg","https://charts-static.billboard.com/img/2025/11/tyla-8f0-chanel-gkl-180x180.jpg","https://charts-static.billboard.com/img/2008/04/she-him-5u4-180x180.jpg","https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg","https://charts-static.billboard.com/img/2025/08/sombr-2ps-12to12-142-180x180.jpg","https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-l0r-180x180.jpg","https://charts-static.billboard.com/img/2016/03/cardi-b-tfu-180x180.jpg","https://charts-static.billboard.com/img/2025/12/poohshiesty-klv-fdo-1pe-180x180.jpg","https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-iaintcomingback-l13-180x180.jpg","https://charts-static.billboard.com/img/2025/10/david-guetta-0qb-gonegonegone-bic-180x180.jpg","https://charts-static.billboard.com/img/2016/03/daniel-caesar-2qj-180x180.jpg","https://charts-static.billboard.com/img/2024/03/tuckerwetmore-ras-180x180.jpg","https://charts-static.billboard.com/img/2025/11/meganmoroney-ugl-beautifulthings-3dm-180x180.jpg","https://charts-static.billboard.com/img/2026/01/siennaspiro-o5d-youstoletheshow-18f-180x180.jpg","https://charts-static.billboard.com/img/2025/02/georgebirge-000-itwontbelong-plv-180x180.jpg","https://charts-static.billboard.com/img/2017/06/youngboy-never-broke-again-ak3-180x180.jpg","https://charts-static.billboard.com/img/2025/11/cody-johnson-0vx-travelinsoldier-cvg-180x180.jpg","https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-howitsdone-3mh-180x180.jpg","https://charts-static.billboard.com/img/2025/10/tame-impala-nyr-dracula-dtm-180x180.jpg","https://charts-static.billboard.com/img/2025/06/alexwarren-vcb-bloodline-b68-180x180.jpg","https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg","https://charts-static.billboard.com/img/2019/12/dontoliver-r01-180x180.jpg","https://charts-static.billboard.com/img/2017/11/lilbaby-kyx-180x180.jpg","https://charts-static.billboard.com/img/2025/09/oliviadean-8k4-nicetoeachother-lqm-180x180.jpg","https://charts-static.billboard.com/img/2025/07/riley-green-flo-changemymind-xi7-180x180.jpg","https://charts-static.billboard.com/img/2025/05/youngboy-never-broke-again-ak3-shotcallin-a7o-180x180.jpg","https://charts-static.billboard.com/img/2022/09/meganmoroney-ugl-180x180.jpg","https://charts-static.billboard.com/img/2025/07/zara-larsson-zej-midnightsun-5mk-180x180.jpg","https://charts-static.billboard.com/img/2025/10/madison-beer-u5k-bittersweet-dmw-180x180.jpg","https://charts-static.billboard.com/img/2025/08/thomas-rhett-sbw-aintabadlife-z5u-180x180.jpg","https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg","https://charts-static.billboard.com/img/2024/09/chasematthew-iyz-darlin-vto-180x180.jpg","https://charts-static.billboard.com/img/2013/08/metro-boomin-koo-180x180.jpg","https://charts-static.billboard.com/img/2018/09/themarias-mjs-180x180.jpg","https://charts-static.billboard.com/img/2025/09/pitbull-zjw-damnilovemiami-db8-180x180.jpg","https://charts-static.billboard.com/img/2025/06/addisonrae-byp-fameisagun-v70-180x180.jpg","https://charts-static.billboard.com/img/2017/01/dababy-a7i-180x180.jpg","https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-elizabethtaylor-fes-180x180.jpg","https://charts-static.billboard.com/img/2026/01/katseye-xrz-internetgirl-tke-180x180.jpg","https://charts-static.billboard.com/img/2024/10/tymyers-tki-endsoftheearth-7v3-180x180.jpg","https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg","https://charts-static.billboard.com/img/2026/01/ti-gmi-letemknow-rv4-180x180.jpg","https://charts-static.billboard.com/img/1995/03/jeff-buckley-31d-180x180.jpg","https://charts-static.billboard.com/img/2016/10/bad-bunny-74k-180x180.jpg","https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg","https://charts-static.billboard.com/img/2013/09/ty-dolla-sign-c0d-180x180.jpg","https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg","https://charts-static.billboard.com/img/2016/11/dave-rjd-180x180.jpg","https://charts-static.billboard.com/img/2025/12/h3adband-aka-boo-efn-180x180.jpg","https://charts-static.billboard.com/img/2025/11/shakira-5cv-zoo-7lp-180x180.jpg","https://charts-static.billboard.com/img/2024/12/justin-moore-w7r-timesticking-2ne-180x180.jpg","https://charts-static.billboard.com/img/2025/04/phil-wickham-40z-whatanawesomegod-7dq-180x180.jpg","https://charts-static.billboard.com/img/2024/09/emmanuelcortes-60h-amor-mwo-180x180.jpg","https://charts-static.billboard.com/img/1993/04/radiohead-9k6-180x180.jpg","https://charts-static.billboard.com/img/2026/01/doechii-h8h-girlgetup-8f8-180x180.jpg","https://charts-static.billboard.com/img/2024/03/strawberryguy-qcy-mrsmagic-m43-180x180.jpg","https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg","https://charts-static.billboard.com/img/2025/08/loeshimmy-000-3am-fvs-180x180.jpg","https://charts-static.billboard.com/img/2016/08/21-savage-6vl-180x180.jpg"],"Song":["Aperture","Choosin' Texas","Man I Need","Golden","The Fate Of Ophelia","I Just Might","Ordinary","Back To Friends","Folded","Opalite","End Of Beginning","Mutt","Where Is My Husband!","What You Saying","I Got Better","So Easy (To Fall In Love)","20 Cigarettes","Daisies","Die On This Hill","wgft","Sleepless In A Hotel Room","Plastic Cigarette","Tit For Tat","It Depends","Nice To Meet You","Better Me For You (Brown Eyes)","Amen","Hell At Night","Gabriela","Stateside","Yukon","A Couple Minutes","4 Raws","The Fall","House Again","Lush Life","How Far Does A Goodbye Go","Favorite Country Song","Days Like These","Stay Here 4 Life","Purple Rain","Is It A Crime","Chanel","I Thought I Saw Your Face Today","Say Why","12 To 12","When Did You Get Hot?","ErrTime","FDO","I Ain't Coming Back","Gone Gone Gone","Who Knows","Brunette","Beautiful Things","You Stole The Show","It Won't Be Long","Bruce Wayne","Travelin' Soldier","How It's Done","Dracula","Bloodline","Helicopter","ATM","Mrs. Trendsetter","Nice To Each Other","Change My Mind","Shot Callin","Wish I Didn't","Midnight Sun","Bittersweet","Ain't A Bad Life","Let Alone The One You Love","Darlin'","Take Me Thru Dere","Sienna","Damn I Love Miami","Fame Is A Gun","Pop Dat Thang","Elizabeth Taylor","Internet Girl","Ends Of The Earth","Phantom","Let 'Em Know","Lover, You Should've Come Over","Voy A Llevarte Pa PR","Stole Ya Flow","Don't Kill The Party","Dopamina","Raindance","BOO","Zoo","Time's Ticking","What An Awesome God","Amor","Let Down","Girl, Get Up.","Mrs Magic","Dano","3am","Mr Recoup"],"Artist":["Harry Styles","Ella Langley","Olivia Dean","HUNTR/X: EJAE, Audrey Nuna & REI AMI","Taylor Swift","Bruno Mars","Alex Warren","sombr","Kehlani","Taylor Swift","Djo","Leon Thomas","RAYE","Lil Uzi Vert","Morgan Wallen","Olivia Dean","Morgan Wallen","Justin Bieber","Sienna Spiro","GunnaFeaturingBurna Boy","Luke Combs","Zach Bryan","Tate McRae","Chris BrownFeaturingBryson Tiller","Myles Smith","Max McNown","Shaboozey&Jelly Roll","BigXthaPlug Featuring Ella Langley","KATSEYE","PinkPantheressWithZara Larsson","Justin Bieber","Olivia Dean","EsDeeKid","Cody Johnson","Hudson Westbrook","Zara Larsson","Jason Aldean","HARDY","Luke Combs","A$AP RockyFeaturing Brent Faiyaz","PrinceAnd The Revolution","Mariah The Scientist&Kali Uchis","Tyla","She & Him","Zach Bryan","sombr","Sabrina Carpenter","Cardi B","Pooh Shiesty","Morgan WallenFeaturingPost Malone","David Guetta,Teddy Swims&Tones And I","Daniel Caesar","Tucker Wetmore","Megan Moroney","Sienna Spiro","George Birge","YoungBoy Never Broke Again","Cody Johnson","HUNTR/X: EJAE, Audrey Nuna & REI AMI","Tame Impala","Alex WarrenWithJelly Roll","A$AP Rocky","Don Toliver","Lil Baby","Olivia Dean","Riley Green","YoungBoy Never Broke Again","Megan Moroney","Zara Larsson","Madison Beer","Thomas RhettFeaturingJordan Davis","Olivia Dean","Chase Matthew","Metro Boomin,Quavo, Breskii & YKNIECE","The Marias","PitbullXLil Jon","Addison Rae","DaBaby","Taylor Swift","KATSEYE","Ty Myers","EsDeeKid & Rico Ace","T.I.","Jeff Buckley","Bad Bunny","A$AP Rocky","Ty Dolla $ignFeaturingQuavo&Juicy J","Peso Pluma& Tito Double P","Dave&Tems","H3adband","Shakira","Justin Moore","Phil Wickham","Emmanuel Cortes","Radiohead","Doechii&SZA","Strawberry Guy","Peso Pluma& Tito Double P","Loe Shimmy &Don Toliver","21 Savage&Drake"],"Last_Week":["-","6","2","4","3","1","5","7","8","10","9","11","13","12","14","17","18","15","20","16","21","19","25","22","26","29","35","28","27","39","31","30","32","36","42","40","46","45","48","23","38","43","52","47","44","49","57","61","41","60","58","67","69","55","64","79","63","53","66","70","72","24","-","93","77","-","71","51","82","68","-","78","86","76","100","91","92","-","75","85","-","87","-","97","94","33","89","-","-","-","95","-","96","-","-","98","-","-","-","-"],"Peak":[1,2,2,1,1,1,1,7,6,2,6,6,13,12,7,14,15,2,19,16,17,13,3,16,25,26,27,26,21,30,17,26,28,34,33,36,37,38,39,23,2,27,43,40,25,41,17,43,12,8,51,52,53,54,55,56,57,12,8,30,32,24,63,64,65,66,43,51,69,68,71,71,52,51,74,76,73,78,3,29,81,67,83,84,17,33,87,52,89,90,77,92,86,90,91,57,97,75,71,51],"Weeks_on_Chart":[1,15,23,32,17,3,50,44,33,17,26,51,18,5,33,18,36,28,6,25,3,3,18,26,33,33,38,25,28,4,29,14,7,18,41,7,16,14,14,2,22,25,7,8,3,24,20,18,7,33,9,5,5,9,4,4,2,12,27,18,18,2,1,2,14,1,20,2,2,3,1,9,18,18,17,2,6,1,17,4,3,6,1,2,16,2,3,3,1,4,5,1,8,5,13,4,1,3,10,6]},"columns":[{"id":"Week","name":"Week","type":"Date","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Rank","name":"Rank","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Cover","name":"Cover","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/04/harry-styles-tuw-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/ellalangley-0yx-choosintexas-3s2-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/oliviadean-8k4-manineed-jej-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-golden-ozh-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-thefateofophelia-ki7-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2010/01/bruno-mars-8dl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/02/alexwarren-vcb-ordinary-jb8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/02/sombr-2ps-backtofriends-xkb-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/06/kehlani-b5q-folded-beh-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-opalite-05j-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/02/djo-fyo-endofbeginning-lak-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/10/leonthomas-y3w-mutt-ch5-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/raye-azb-whereismyhusband-mtb-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/lil-uzi-vert-z30-whatyousaying-y59-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-igotbetter-8s9-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-20cigarettes-37w-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/siennaspiro-o5d-dieonthishill-f28-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/09/gunna-t8f-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2015/07/luke-combs-vjy-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/tatemcrae-vd8-titfortat-qq9-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/chris-brown-cyh-itdepends-6sf-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/05/mylessmith-w4f-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/11/maxmcnown-0ht-bettermeforyoubrowneyes-h8h-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/01/shaboozey-2wm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2023/02/bigxthaplug-b4l-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/katseye-xrz-gabriela-iea-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/pinkpantheress-j53-stateside-ska-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/oliviadean-8k4-acoupleminutes-of9-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/cody-johnson-0vx-thefall-rvi-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/11/hudsonwestbrook-9ly-houseagain-zq0-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/01/zara-larsson-zej-lushlife-cik-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/09/jason-aldean-903-howfardoesagoodbyego-vgz-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/04/hardy-rmc-favoritecountrysong-jny-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/luke-combs-s5l-dayslikethese-eep-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/1984/09/prince-5k7-purplerain-6pm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2021/01/mariahthescientist-nuo-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/tyla-8f0-chanel-gkl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2008/04/she-him-5u4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/sombr-2ps-12to12-142-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-l0r-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/03/cardi-b-tfu-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/12/poohshiesty-klv-fdo-1pe-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-iaintcomingback-l13-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/david-guetta-0qb-gonegonegone-bic-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/03/daniel-caesar-2qj-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/03/tuckerwetmore-ras-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/meganmoroney-ugl-beautifulthings-3dm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/siennaspiro-o5d-youstoletheshow-18f-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/02/georgebirge-000-itwontbelong-plv-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/06/youngboy-never-broke-again-ak3-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/cody-johnson-0vx-travelinsoldier-cvg-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-howitsdone-3mh-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/tame-impala-nyr-dracula-dtm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/06/alexwarren-vcb-bloodline-b68-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/12/dontoliver-r01-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/11/lilbaby-kyx-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/09/oliviadean-8k4-nicetoeachother-lqm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/riley-green-flo-changemymind-xi7-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/youngboy-never-broke-again-ak3-shotcallin-a7o-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/09/meganmoroney-ugl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/zara-larsson-zej-midnightsun-5mk-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/madison-beer-u5k-bittersweet-dmw-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/thomas-rhett-sbw-aintabadlife-z5u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/09/chasematthew-iyz-darlin-vto-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2013/08/metro-boomin-koo-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2018/09/themarias-mjs-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/09/pitbull-zjw-damnilovemiami-db8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/06/addisonrae-byp-fameisagun-v70-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/01/dababy-a7i-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-elizabethtaylor-fes-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/katseye-xrz-internetgirl-tke-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/10/tymyers-tki-endsoftheearth-7v3-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/ti-gmi-letemknow-rv4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/1995/03/jeff-buckley-31d-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/10/bad-bunny-74k-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2013/09/ty-dolla-sign-c0d-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/11/dave-rjd-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/12/h3adband-aka-boo-efn-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/shakira-5cv-zoo-7lp-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/12/justin-moore-w7r-timesticking-2ne-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/04/phil-wickham-40z-whatanawesomegod-7dq-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/09/emmanuelcortes-60h-amor-mwo-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/1993/04/radiohead-9k6-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/doechii-h8h-girlgetup-8f8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/03/strawberryguy-qcy-mrsmagic-m43-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/loeshimmy-000-3am-fvs-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/08/21-savage-6vl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>"],"html":true,"align":"left"},{"id":"Song","name":"Song","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"left"},{"id":"Artist","name":"Artist","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"left"},{"id":"Last_Week","name":"Last_Week","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Peak","name":"Peak","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Weeks_on_Chart","name":"Weeks_on_Chart","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"font-family":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif","fontSize":"16px"},"tableStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3"},"headerStyle":{"fontWeight":"normal","backgroundColor":"transparent","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"},"groupHeaderStyle":{"fontWeight":"normal","backgroundColor":"transparent","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"},"cellStyle":{"fontWeight":"normal"}},"elementId":"fljpaarxfu","dataKey":"37de1282608ac7d89b8abc2a97ada2d1"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style","tag.attribs.columns.4.style","tag.attribs.columns.5.style","tag.attribs.columns.6.style","tag.attribs.columns.7.style"],"jsHooks":[]}</script>
+<div id="avnrkharvb" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="avnrkharvb">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Week":["2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07","2026-02-07"],"Rank":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100],"Cover":["https://charts-static.billboard.com/img/2017/04/harry-styles-tuw-180x180.jpg","https://charts-static.billboard.com/img/2025/11/ellalangley-0yx-choosintexas-3s2-180x180.jpg","https://charts-static.billboard.com/img/2025/08/oliviadean-8k4-manineed-jej-180x180.jpg","https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-golden-ozh-180x180.jpg","https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-thefateofophelia-ki7-180x180.jpg","https://charts-static.billboard.com/img/2010/01/bruno-mars-8dl-180x180.jpg","https://charts-static.billboard.com/img/2025/02/alexwarren-vcb-ordinary-jb8-180x180.jpg","https://charts-static.billboard.com/img/2025/02/sombr-2ps-backtofriends-xkb-180x180.jpg","https://charts-static.billboard.com/img/2025/06/kehlani-b5q-folded-beh-180x180.jpg","https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-opalite-05j-180x180.jpg","https://charts-static.billboard.com/img/2024/02/djo-fyo-endofbeginning-lak-180x180.jpg","https://charts-static.billboard.com/img/2024/10/leonthomas-y3w-mutt-ch5-180x180.jpg","https://charts-static.billboard.com/img/2025/10/raye-azb-whereismyhusband-mtb-180x180.jpg","https://charts-static.billboard.com/img/2026/01/lil-uzi-vert-z30-whatyousaying-y59-180x180.jpg","https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-igotbetter-8s9-180x180.jpg","https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg","https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-20cigarettes-37w-180x180.jpg","https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg","https://charts-static.billboard.com/img/2025/11/siennaspiro-o5d-dieonthishill-f28-180x180.jpg","https://charts-static.billboard.com/img/2016/09/gunna-t8f-180x180.jpg","https://charts-static.billboard.com/img/2015/07/luke-combs-vjy-180x180.jpg","https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg","https://charts-static.billboard.com/img/2025/10/tatemcrae-vd8-titfortat-qq9-180x180.jpg","https://charts-static.billboard.com/img/2025/08/chris-brown-cyh-itdepends-6sf-180x180.jpg","https://charts-static.billboard.com/img/2024/05/mylessmith-w4f-180x180.jpg","https://charts-static.billboard.com/img/2024/11/maxmcnown-0ht-bettermeforyoubrowneyes-h8h-180x180.jpg","https://charts-static.billboard.com/img/2019/01/shaboozey-2wm-180x180.jpg","https://charts-static.billboard.com/img/2023/02/bigxthaplug-b4l-180x180.jpg","https://charts-static.billboard.com/img/2025/07/katseye-xrz-gabriela-iea-180x180.jpg","https://charts-static.billboard.com/img/2025/05/pinkpantheress-j53-stateside-ska-180x180.jpg","https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg","https://charts-static.billboard.com/img/2025/11/oliviadean-8k4-acoupleminutes-of9-180x180.jpg","https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg","https://charts-static.billboard.com/img/2025/05/cody-johnson-0vx-thefall-rvi-180x180.jpg","https://charts-static.billboard.com/img/2024/11/hudsonwestbrook-9ly-houseagain-zq0-180x180.jpg","https://charts-static.billboard.com/img/2016/01/zara-larsson-zej-lushlife-cik-180x180.jpg","https://charts-static.billboard.com/img/2025/09/jason-aldean-903-howfardoesagoodbyego-vgz-180x180.jpg","https://charts-static.billboard.com/img/2025/04/hardy-rmc-favoritecountrysong-jny-180x180.jpg","https://charts-static.billboard.com/img/2025/10/luke-combs-s5l-dayslikethese-eep-180x180.jpg","https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg","https://charts-static.billboard.com/img/1984/09/prince-5k7-purplerain-6pm-180x180.jpg","https://charts-static.billboard.com/img/2021/01/mariahthescientist-nuo-180x180.jpg","https://charts-static.billboard.com/img/2025/11/tyla-8f0-chanel-gkl-180x180.jpg","https://charts-static.billboard.com/img/2008/04/she-him-5u4-180x180.jpg","https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg","https://charts-static.billboard.com/img/2025/08/sombr-2ps-12to12-142-180x180.jpg","https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-l0r-180x180.jpg","https://charts-static.billboard.com/img/2016/03/cardi-b-tfu-180x180.jpg","https://charts-static.billboard.com/img/2025/12/poohshiesty-klv-fdo-1pe-180x180.jpg","https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-iaintcomingback-l13-180x180.jpg","https://charts-static.billboard.com/img/2025/10/david-guetta-0qb-gonegonegone-bic-180x180.jpg","https://charts-static.billboard.com/img/2016/03/daniel-caesar-2qj-180x180.jpg","https://charts-static.billboard.com/img/2024/03/tuckerwetmore-ras-180x180.jpg","https://charts-static.billboard.com/img/2025/11/meganmoroney-ugl-beautifulthings-3dm-180x180.jpg","https://charts-static.billboard.com/img/2026/01/siennaspiro-o5d-youstoletheshow-18f-180x180.jpg","https://charts-static.billboard.com/img/2025/02/georgebirge-000-itwontbelong-plv-180x180.jpg","https://charts-static.billboard.com/img/2017/06/youngboy-never-broke-again-ak3-180x180.jpg","https://charts-static.billboard.com/img/2025/11/cody-johnson-0vx-travelinsoldier-cvg-180x180.jpg","https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-howitsdone-3mh-180x180.jpg","https://charts-static.billboard.com/img/2025/10/tame-impala-nyr-dracula-dtm-180x180.jpg","https://charts-static.billboard.com/img/2025/06/alexwarren-vcb-bloodline-b68-180x180.jpg","https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg","https://charts-static.billboard.com/img/2019/12/dontoliver-r01-180x180.jpg","https://charts-static.billboard.com/img/2017/11/lilbaby-kyx-180x180.jpg","https://charts-static.billboard.com/img/2025/09/oliviadean-8k4-nicetoeachother-lqm-180x180.jpg","https://charts-static.billboard.com/img/2025/07/riley-green-flo-changemymind-xi7-180x180.jpg","https://charts-static.billboard.com/img/2025/05/youngboy-never-broke-again-ak3-shotcallin-a7o-180x180.jpg","https://charts-static.billboard.com/img/2022/09/meganmoroney-ugl-180x180.jpg","https://charts-static.billboard.com/img/2025/07/zara-larsson-zej-midnightsun-5mk-180x180.jpg","https://charts-static.billboard.com/img/2025/10/madison-beer-u5k-bittersweet-dmw-180x180.jpg","https://charts-static.billboard.com/img/2025/08/thomas-rhett-sbw-aintabadlife-z5u-180x180.jpg","https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg","https://charts-static.billboard.com/img/2024/09/chasematthew-iyz-darlin-vto-180x180.jpg","https://charts-static.billboard.com/img/2013/08/metro-boomin-koo-180x180.jpg","https://charts-static.billboard.com/img/2018/09/themarias-mjs-180x180.jpg","https://charts-static.billboard.com/img/2025/09/pitbull-zjw-damnilovemiami-db8-180x180.jpg","https://charts-static.billboard.com/img/2025/06/addisonrae-byp-fameisagun-v70-180x180.jpg","https://charts-static.billboard.com/img/2017/01/dababy-a7i-180x180.jpg","https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-elizabethtaylor-fes-180x180.jpg","https://charts-static.billboard.com/img/2026/01/katseye-xrz-internetgirl-tke-180x180.jpg","https://charts-static.billboard.com/img/2024/10/tymyers-tki-endsoftheearth-7v3-180x180.jpg","https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg","https://charts-static.billboard.com/img/2026/01/ti-gmi-letemknow-rv4-180x180.jpg","https://charts-static.billboard.com/img/1995/03/jeff-buckley-31d-180x180.jpg","https://charts-static.billboard.com/img/2016/10/bad-bunny-74k-180x180.jpg","https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg","https://charts-static.billboard.com/img/2013/09/ty-dolla-sign-c0d-180x180.jpg","https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg","https://charts-static.billboard.com/img/2016/11/dave-rjd-180x180.jpg","https://charts-static.billboard.com/img/2025/12/h3adband-aka-boo-efn-180x180.jpg","https://charts-static.billboard.com/img/2025/11/shakira-5cv-zoo-7lp-180x180.jpg","https://charts-static.billboard.com/img/2024/12/justin-moore-w7r-timesticking-2ne-180x180.jpg","https://charts-static.billboard.com/img/2025/04/phil-wickham-40z-whatanawesomegod-7dq-180x180.jpg","https://charts-static.billboard.com/img/2024/09/emmanuelcortes-60h-amor-mwo-180x180.jpg","https://charts-static.billboard.com/img/1993/04/radiohead-9k6-180x180.jpg","https://charts-static.billboard.com/img/2026/01/doechii-h8h-girlgetup-8f8-180x180.jpg","https://charts-static.billboard.com/img/2024/03/strawberryguy-qcy-mrsmagic-m43-180x180.jpg","https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg","https://charts-static.billboard.com/img/2025/08/loeshimmy-000-3am-fvs-180x180.jpg","https://charts-static.billboard.com/img/2016/08/21-savage-6vl-180x180.jpg"],"Song":["Aperture","Choosin' Texas","Man I Need","Golden","The Fate Of Ophelia","I Just Might","Ordinary","Back To Friends","Folded","Opalite","End Of Beginning","Mutt","Where Is My Husband!","What You Saying","I Got Better","So Easy (To Fall In Love)","20 Cigarettes","Daisies","Die On This Hill","wgft","Sleepless In A Hotel Room","Plastic Cigarette","Tit For Tat","It Depends","Nice To Meet You","Better Me For You (Brown Eyes)","Amen","Hell At Night","Gabriela","Stateside","Yukon","A Couple Minutes","4 Raws","The Fall","House Again","Lush Life","How Far Does A Goodbye Go","Favorite Country Song","Days Like These","Stay Here 4 Life","Purple Rain","Is It A Crime","Chanel","I Thought I Saw Your Face Today","Say Why","12 To 12","When Did You Get Hot?","ErrTime","FDO","I Ain't Coming Back","Gone Gone Gone","Who Knows","Brunette","Beautiful Things","You Stole The Show","It Won't Be Long","Bruce Wayne","Travelin' Soldier","How It's Done","Dracula","Bloodline","Helicopter","ATM","Mrs. Trendsetter","Nice To Each Other","Change My Mind","Shot Callin","Wish I Didn't","Midnight Sun","Bittersweet","Ain't A Bad Life","Let Alone The One You Love","Darlin'","Take Me Thru Dere","Sienna","Damn I Love Miami","Fame Is A Gun","Pop Dat Thang","Elizabeth Taylor","Internet Girl","Ends Of The Earth","Phantom","Let 'Em Know","Lover, You Should've Come Over","Voy A Llevarte Pa PR","Stole Ya Flow","Don't Kill The Party","Dopamina","Raindance","BOO","Zoo","Time's Ticking","What An Awesome God","Amor","Let Down","Girl, Get Up.","Mrs Magic","Dano","3am","Mr Recoup"],"Artist":["Harry Styles","Ella Langley","Olivia Dean","HUNTR/X: EJAE, Audrey Nuna & REI AMI","Taylor Swift","Bruno Mars","Alex Warren","sombr","Kehlani","Taylor Swift","Djo","Leon Thomas","RAYE","Lil Uzi Vert","Morgan Wallen","Olivia Dean","Morgan Wallen","Justin Bieber","Sienna Spiro","GunnaFeaturingBurna Boy","Luke Combs","Zach Bryan","Tate McRae","Chris BrownFeaturingBryson Tiller","Myles Smith","Max McNown","Shaboozey&Jelly Roll","BigXthaPlug Featuring Ella Langley","KATSEYE","PinkPantheressWithZara Larsson","Justin Bieber","Olivia Dean","EsDeeKid","Cody Johnson","Hudson Westbrook","Zara Larsson","Jason Aldean","HARDY","Luke Combs","A$AP RockyFeaturing Brent Faiyaz","PrinceAnd The Revolution","Mariah The Scientist&Kali Uchis","Tyla","She & Him","Zach Bryan","sombr","Sabrina Carpenter","Cardi B","Pooh Shiesty","Morgan WallenFeaturingPost Malone","David Guetta,Teddy Swims&Tones And I","Daniel Caesar","Tucker Wetmore","Megan Moroney","Sienna Spiro","George Birge","YoungBoy Never Broke Again","Cody Johnson","HUNTR/X: EJAE, Audrey Nuna & REI AMI","Tame Impala","Alex WarrenWithJelly Roll","A$AP Rocky","Don Toliver","Lil Baby","Olivia Dean","Riley Green","YoungBoy Never Broke Again","Megan Moroney","Zara Larsson","Madison Beer","Thomas RhettFeaturingJordan Davis","Olivia Dean","Chase Matthew","Metro Boomin,Quavo, Breskii & YKNIECE","The Marias","PitbullXLil Jon","Addison Rae","DaBaby","Taylor Swift","KATSEYE","Ty Myers","EsDeeKid & Rico Ace","T.I.","Jeff Buckley","Bad Bunny","A$AP Rocky","Ty Dolla $ignFeaturingQuavo&Juicy J","Peso Pluma& Tito Double P","Dave&Tems","H3adband","Shakira","Justin Moore","Phil Wickham","Emmanuel Cortes","Radiohead","Doechii&SZA","Strawberry Guy","Peso Pluma& Tito Double P","Loe Shimmy &Don Toliver","21 Savage&Drake"],"Last_Week":["-","6","2","4","3","1","5","7","8","10","9","11","13","12","14","17","18","15","20","16","21","19","25","22","26","29","35","28","27","39","31","30","32","36","42","40","46","45","48","23","38","43","52","47","44","49","57","61","41","60","58","67","69","55","64","79","63","53","66","70","72","24","-","93","77","-","71","51","82","68","-","78","86","76","100","91","92","-","75","85","-","87","-","97","94","33","89","-","-","-","95","-","96","-","-","98","-","-","-","-"],"Peak":[1,2,2,1,1,1,1,7,6,2,6,6,13,12,7,14,15,2,19,16,17,13,3,16,25,26,27,26,21,30,17,26,28,34,33,36,37,38,39,23,2,27,43,40,25,41,17,43,12,8,51,52,53,54,55,56,57,12,8,30,32,24,63,64,65,66,43,51,69,68,71,71,52,51,74,76,73,78,3,29,81,67,83,84,17,33,87,52,89,90,77,92,86,90,91,57,97,75,71,51],"Weeks_on_Chart":[1,15,23,32,17,3,50,44,33,17,26,51,18,5,33,18,36,28,6,25,3,3,18,26,33,33,38,25,28,4,29,14,7,18,41,7,16,14,14,2,22,25,7,8,3,24,20,18,7,33,9,5,5,9,4,4,2,12,27,18,18,2,1,2,14,1,20,2,2,3,1,9,18,18,17,2,6,1,17,4,3,6,1,2,16,2,3,3,1,4,5,1,8,5,13,4,1,3,10,6]},"columns":[{"id":"Week","name":"Week","type":"Date","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Rank","name":"Rank","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Cover","name":"Cover","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/04/harry-styles-tuw-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/ellalangley-0yx-choosintexas-3s2-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/oliviadean-8k4-manineed-jej-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-golden-ozh-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-thefateofophelia-ki7-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2010/01/bruno-mars-8dl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/02/alexwarren-vcb-ordinary-jb8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/02/sombr-2ps-backtofriends-xkb-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/06/kehlani-b5q-folded-beh-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-opalite-05j-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/02/djo-fyo-endofbeginning-lak-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/10/leonthomas-y3w-mutt-ch5-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/raye-azb-whereismyhusband-mtb-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/lil-uzi-vert-z30-whatyousaying-y59-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-igotbetter-8s9-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-20cigarettes-37w-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/siennaspiro-o5d-dieonthishill-f28-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/09/gunna-t8f-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2015/07/luke-combs-vjy-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/tatemcrae-vd8-titfortat-qq9-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/chris-brown-cyh-itdepends-6sf-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/05/mylessmith-w4f-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/11/maxmcnown-0ht-bettermeforyoubrowneyes-h8h-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/01/shaboozey-2wm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2023/02/bigxthaplug-b4l-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/katseye-xrz-gabriela-iea-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/pinkpantheress-j53-stateside-ska-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2009/07/justin-bieber-dj8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/oliviadean-8k4-acoupleminutes-of9-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/cody-johnson-0vx-thefall-rvi-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/11/hudsonwestbrook-9ly-houseagain-zq0-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/01/zara-larsson-zej-lushlife-cik-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/09/jason-aldean-903-howfardoesagoodbyego-vgz-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/04/hardy-rmc-favoritecountrysong-jny-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/luke-combs-s5l-dayslikethese-eep-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/1984/09/prince-5k7-purplerain-6pm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2021/01/mariahthescientist-nuo-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/tyla-8f0-chanel-gkl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2008/04/she-him-5u4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/09/zachbryan-bqn-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/sombr-2ps-12to12-142-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-l0r-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/03/cardi-b-tfu-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/12/poohshiesty-klv-fdo-1pe-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-iaintcomingback-l13-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/david-guetta-0qb-gonegonegone-bic-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/03/daniel-caesar-2qj-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/03/tuckerwetmore-ras-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/meganmoroney-ugl-beautifulthings-3dm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/siennaspiro-o5d-youstoletheshow-18f-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/02/georgebirge-000-itwontbelong-plv-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/06/youngboy-never-broke-again-ak3-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/cody-johnson-0vx-travelinsoldier-cvg-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-howitsdone-3mh-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/tame-impala-nyr-dracula-dtm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/06/alexwarren-vcb-bloodline-b68-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2019/12/dontoliver-r01-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/11/lilbaby-kyx-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/09/oliviadean-8k4-nicetoeachother-lqm-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/riley-green-flo-changemymind-xi7-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/05/youngboy-never-broke-again-ak3-shotcallin-a7o-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/09/meganmoroney-ugl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/07/zara-larsson-zej-midnightsun-5mk-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/madison-beer-u5k-bittersweet-dmw-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/thomas-rhett-sbw-aintabadlife-z5u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/01/oliviadean-8k4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/09/chasematthew-iyz-darlin-vto-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2013/08/metro-boomin-koo-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2018/09/themarias-mjs-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/09/pitbull-zjw-damnilovemiami-db8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/06/addisonrae-byp-fameisagun-v70-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2017/01/dababy-a7i-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/10/taylor-swift-vug-elizabethtaylor-fes-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/katseye-xrz-internetgirl-tke-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/10/tymyers-tki-endsoftheearth-7v3-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/esdeekid-laa-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/ti-gmi-letemknow-rv4-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/1995/03/jeff-buckley-31d-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/10/bad-bunny-74k-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2011/12/aap-rocky-u7u-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2013/09/ty-dolla-sign-c0d-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/11/dave-rjd-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/12/h3adband-aka-boo-efn-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/11/shakira-5cv-zoo-7lp-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/12/justin-moore-w7r-timesticking-2ne-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/04/phil-wickham-40z-whatanawesomegod-7dq-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/09/emmanuelcortes-60h-amor-mwo-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/1993/04/radiohead-9k6-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2026/01/doechii-h8h-girlgetup-8f8-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2024/03/strawberryguy-qcy-mrsmagic-m43-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2022/04/pesopluma-axe-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2025/08/loeshimmy-000-3am-fvs-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>","<span style=\"white-space:nowrap;\"><img src=\"https://charts-static.billboard.com/img/2016/08/21-savage-6vl-180x180.jpg\" style=\"height:45px;vertical-align:middle;\"><\/span>"],"html":true,"align":"left"},{"id":"Song","name":"Song","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"left"},{"id":"Artist","name":"Artist","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"left"},{"id":"Last_Week","name":"Last_Week","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Peak","name":"Peak","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"},{"id":"Weeks_on_Chart","name":"Weeks_on_Chart","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","html":true,"align":"right"}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"font-family":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif","fontSize":"16px"},"tableStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3"},"headerStyle":{"fontWeight":"normal","backgroundColor":"transparent","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"},"groupHeaderStyle":{"fontWeight":"normal","backgroundColor":"transparent","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"},"cellStyle":{"fontWeight":"normal"}},"elementId":"avnrkharvb","dataKey":"37de1282608ac7d89b8abc2a97ada2d1"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style","tag.attribs.columns.4.style","tag.attribs.columns.5.style","tag.attribs.columns.6.style","tag.attribs.columns.7.style"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="summary-statistics">Summary Statistics</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="hjoabpoofu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hjoabpoofu table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hjoabpoofu thead, #hjoabpoofu tbody, #hjoabpoofu tfoot, #hjoabpoofu tr, #hjoabpoofu td, #hjoabpoofu th {
+  border-style: none;
+}
+
+#hjoabpoofu p {
+  margin: 0;
+  padding: 0;
+}
+
+#hjoabpoofu .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hjoabpoofu .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hjoabpoofu .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hjoabpoofu .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hjoabpoofu .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hjoabpoofu .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hjoabpoofu .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hjoabpoofu .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hjoabpoofu .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hjoabpoofu .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hjoabpoofu .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hjoabpoofu .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hjoabpoofu .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hjoabpoofu .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hjoabpoofu .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjoabpoofu .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hjoabpoofu .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hjoabpoofu .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hjoabpoofu .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjoabpoofu .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hjoabpoofu .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjoabpoofu .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hjoabpoofu .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjoabpoofu .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hjoabpoofu .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjoabpoofu .gt_left {
+  text-align: left;
+}
+
+#hjoabpoofu .gt_center {
+  text-align: center;
+}
+
+#hjoabpoofu .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hjoabpoofu .gt_font_normal {
+  font-weight: normal;
+}
+
+#hjoabpoofu .gt_font_bold {
+  font-weight: bold;
+}
+
+#hjoabpoofu .gt_font_italic {
+  font-style: italic;
+}
+
+#hjoabpoofu .gt_super {
+  font-size: 65%;
+}
+
+#hjoabpoofu .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hjoabpoofu .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hjoabpoofu .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hjoabpoofu .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hjoabpoofu .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hjoabpoofu .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hjoabpoofu .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#hjoabpoofu .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#hjoabpoofu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Average-Weeks-on-Chart" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Average Weeks on Chart</th>
+<th id="Median-Weeks-on-Chart" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Median Weeks on Chart</th>
+<th id="Most-Weeks-on-Chart" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Most Weeks on Chart</th>
+<th id="Songs-Reaching-#1" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Songs Reaching #1</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Average Weeks on Chart">13.7</td>
+<td class="gt_row gt_right" headers="Median Weeks on Chart">9</td>
+<td class="gt_row gt_right" headers="Most Weeks on Chart">51</td>
+<td class="gt_row gt_right" headers="Songs Reaching #1">5</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
 </div>
@@ -586,21 +1017,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="weeks-on-chart" class="level2">
 <h2 class="anchored" data-anchor-id="weeks-on-chart">Weeks on Chart</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>billboard <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">100</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Weeks_on_Chart)) <span class="sc">+</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Weeks on Chart for Top 100 Songs"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Billboard Hot 100 (Week of Feb 7, 2026)"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Weeks on Chart"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Songs"</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

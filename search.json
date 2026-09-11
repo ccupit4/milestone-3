@@ -4,21 +4,14 @@
     "href": "project.html",
     "title": "Final Project Milestone 3",
     "section": "",
-    "text": "NoteProject Plan\n\n\n\nI am planning to compare the top genres in songs from the Billboard Top 100 from the beginning and median years of each decade since the Billboard Top 100 has started. I am also going to find different impactful events from these years or surrounding years and see the impact on the popular genres during that time.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTotal All-Time Songs\nDistinct Genres\nTop Genre\nMost Featured Artist\n#1 All-Time Song\n\n\n\n\n100\n11\nContemporary Pop (26 songs)\nBee Gees (3 songs)\nBlinding Lights by The Weeknd\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBillboard Greatest of All Time Hot 100\nOfficial ranking of the top songs in Billboard chart history\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop Song of Each 5-Year Milestone\n600 biggest hits sampled every 5 years from 1965 to 2020"
-  },
-  {
-    "objectID": "project.html#all-time-hot-100-summary-statistics",
-    "href": "project.html#all-time-hot-100-summary-statistics",
-    "title": "Final Project Milestone 3",
-    "section": "",
-    "text": "Total All-Time Songs\nDistinct Genres\nTop Genre\nMost Featured Artist\n#1 All-Time Song\n\n\n\n\n100\n11\nContemporary Pop (26 songs)\nBee Gees (3 songs)\nBlinding Lights by The Weeknd"
+    "text": "NoteProject Plan\n\n\n\nI am planning to compare the top genres in songs from the Billboard Top 100 from the beginning and median years of each decade since the Billboard Top 100 has started. I am also going to find different impactful events from these years or surrounding years and see the impact on the popular genres during that time.\n\n\n\n\n\n\n\n\n\nBillboard Greatest of All Time Hot 100\nOfficial ranking and chart statistics of the top songs in Billboard history\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTop Song of Each 5-Year Milestone\n600 biggest hits sampled every 5 years from 1965 to 2020"
   },
   {
     "objectID": "project.html#billboard-greatest-of-all-time-hot-100-songs",
     "href": "project.html#billboard-greatest-of-all-time-hot-100-songs",
     "title": "Final Project Milestone 3",
     "section": "",
-    "text": "Billboard Greatest of All Time Hot 100\nOfficial ranking of the top songs in Billboard chart history"
+    "text": "Billboard Greatest of All Time Hot 100\nOfficial ranking and chart statistics of the top songs in Billboard history"
   },
   {
     "objectID": "project.html#top-song-of-each-5-year-milestone",
@@ -32,34 +25,27 @@
     "href": "index.html",
     "title": "Mind For Music",
     "section": "",
-    "text": "Explore the genres, songs, and artists that shaped the Billboard Hot 100 across milestone years from 1965 to 2020.\nOpen the interactive analysis"
+    "text": "Explore how musical genres, legendary artists, and iconic hits have dominated the Billboard Hot 100 from 1965 through the modern streaming era.\n\n\n🔥 60+ Years of Hot 100 Data\n\n\n🏆 100 Greatest Hits of All Time\n\n\n🎧 600 Milestone Songs Analyzed\n\n\n🎸 11 Musical Genres Tracked\n\n\nExplore the Complete Data & Tracks →"
   },
   {
-    "objectID": "index.html#billboard-genre-history-at-a-glance",
-    "href": "index.html#billboard-genre-history-at-a-glance",
+    "objectID": "index.html#the-sonic-evolution-of-billboard",
+    "href": "index.html#the-sonic-evolution-of-billboard",
     "title": "Mind For Music",
     "section": "",
-    "text": "Explore the genres, songs, and artists that shaped the Billboard Hot 100 across milestone years from 1965 to 2020.\nOpen the interactive analysis"
+    "text": "Explore how musical genres, legendary artists, and iconic hits have dominated the Billboard Hot 100 from 1965 through the modern streaming era.\n\n\n🔥 60+ Years of Hot 100 Data\n\n\n🏆 100 Greatest Hits of All Time\n\n\n🎧 600 Milestone Songs Analyzed\n\n\n🎸 11 Musical Genres Tracked\n\n\nExplore the Complete Data & Tracks →"
+  },
+  {
+    "objectID": "index.html#billboard-greatest-of-all-time-genre-breakdown",
+    "href": "index.html#billboard-greatest-of-all-time-genre-breakdown",
+    "title": "Mind For Music",
+    "section": "🏆 Billboard Greatest of All Time: Genre Breakdown",
+    "text": "🏆 Billboard Greatest of All Time: Genre Breakdown\nExplore which genres generated the longest-lasting, highest-charting hits in music history, with top album covers and average ranks."
   },
   {
     "objectID": "index.html#genre-evolution-every-5-years-1965-2020",
     "href": "index.html#genre-evolution-every-5-years-1965-2020",
     "title": "Mind For Music",
-    "section": "Genre Evolution: Every 5 Years (1965 – 2020)",
-    "text": "Genre Evolution: Every 5 Years (1965 – 2020)"
-  },
-  {
-    "objectID": "index.html#what-is-inside",
-    "href": "index.html#what-is-inside",
-    "title": "Mind For Music",
-    "section": "What is inside",
-    "text": "What is inside\n\nGenre evolution: Compare the share of major genres every five years.\nTop hits: See the biggest songs from each sampled era.\nHistorical browser: Search and filter the complete set of sampled songs."
-  },
-  {
-    "objectID": "index.html#the-question",
-    "href": "index.html#the-question",
-    "title": "Mind For Music",
-    "section": "The question",
-    "text": "The question\nWhich genres dominated different eras of popular music, and which songs best represent those changes?"
+    "section": "📊 Genre Evolution: Every 5 Years (1965 – 2020)",
+    "text": "📊 Genre Evolution: Every 5 Years (1965 – 2020)\nTrack how market shares shifted across six decades, sampled at five-year milestones."
   }
 ]

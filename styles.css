@@ -1,0 +1,34 @@
+:root {
+  --ink: #111827;
+  --paper: #f8fafc;
+  --accent: #f97316;
+}
+
+body {
+  background: var(--paper);
+}
+
+.hero-panel {
+  max-width: 900px;
+  margin: 4rem auto 5rem;
+  padding: clamp(2.5rem, 8vw, 6rem) clamp(1.5rem, 7vw, 6rem);
+  color: #fff;
+  background: linear-gradient(125deg, var(--ink) 0%, #334155 70%, var(--accent) 140%);
+  box-shadow: 12px 12px 0 var(--accent);
+}
+
+.hero-panel h2 {
+  max-width: 12ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.hero-panel p {
+  max-width: 58ch;
+  font-size: 1.15rem;
+}
+
+.hero-panel .btn {
+  margin-top: 1rem;
+}
